@@ -1,0 +1,39 @@
+/* LoginForm.css (Same can be used for sign-up forms) */
+.login-form, .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-title, .signup-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-field {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .submit-button, .guest-button, .signup-button, .switch-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #90EE90;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .submit-button:hover, .guest-button:hover, .signup-button:hover, .switch-button:hover {
+    background-color: #77dd77;
+  }
+  

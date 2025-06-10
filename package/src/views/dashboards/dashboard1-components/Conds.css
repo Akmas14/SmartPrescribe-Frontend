@@ -1,0 +1,332 @@
+/* Reset margins and paddings for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+/* Hamburger button adjustments */
+.hamburger-btn svg {
+    width: 24px;
+    height: 24px;
+}
+/* General container for the dashboard */
+.dashboard-container {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure content starts below navbar */
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element width/height */
+    width: 100vw; /* Take the full width of the viewport */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+/* Navbar adjustments */
+.navbar {
+    position: fixed; /* Ensure the navbar sticks to the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; /* Ensure the navbar spans the full width of the viewport */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure the navbar stays on top of content */
+    display: flex;
+    justify-content: space-between; /* Ensure content spreads across the navbar */
+    align-items: center; /* Vertically center items */
+}
+
+.navbar .btn-square {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar text alignment */
+.navbar .text-xl {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+/* Container for the tables to display them side by side */
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1; /* Ensures the tables take up the remaining space below the navbar */
+    margin-top: 80px; /* Adjust the margin to fit the navbar height */
+    width: 100%; /* Ensures the container stretches across the full width */
+}
+  
+/* General styling for each table */
+.table {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    min-height: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.table h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjustments for medication list items */
+.medications-table ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Medication List Items */
+.medications-table .table-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medications-table .table-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the Remove button next to each medication */
+.remove-med-btn {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.remove-med-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Conditions List: Updated to show items in a grid with 2 larger columns */
+.conditions-table ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.conditions-table .table-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.conditions-table .table-item:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Highlight selected items for conditions */
+.selected {
+    background-color: #00a2ff;
+    color: white;
+    border-color: #00a2ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Specific table background for conditions */
+.conditions-table {
+    background-color: #fff;
+}
+
+.conditions-and-renal-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+  
+.renal-function-section {
+    width: 40%;
+}
+
+/* Style the search bar */
+input[type="search"] {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="search"]:focus {
+    border-color: #007bff;
+}
+
+/* Styling for the Generate Recommendation button */
+.recommendation-btn {
+    padding: 15px 30px;
+    background-color: #0037ff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+}
+
+.recommendation-btn:hover {
+    background-color: #3a8cff;
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+}
+
+/* Additional buttons styling */
+.learn-more-container {
+    margin-top: 10px;
+}
+  
+.learn-more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #0056b3;
+}
+
+.approve-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.disapprove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.submit-comment {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.approve-all-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-btn {
+    background-color: #d3d3d3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
